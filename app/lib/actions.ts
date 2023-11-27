@@ -115,8 +115,8 @@ export async function authenticate(prevState: string | undefined, formData: Form
     try {
         await signIn('credentials', Object.fromEntries(formData));
     } catch (error) {
-        if((error as Error).message.includes("CredentialSignin")) {
-            return 'CredentialSignin';
+        if((error as Error).message.includes("CredentialsSignin")) {
+            return 'CredentialsSignin';
         }
         throw error;
     }
